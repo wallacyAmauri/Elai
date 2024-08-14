@@ -1,22 +1,46 @@
-var swiper3 = new Swiper(".swiper_about", {
-    slidesPerView: 1,
-    effect: "creative",
-    spaceBetween: 30,
-    grabCursor: true,
-    speed: 1000,
-    loop: true,
+var swiper = new Swiper(".about-slide", {
+    effect: "slide",
+    speed: 900,
+    loop:true,
+    // mousewheel: {
+    //     invert:false,
+    //     thresholdDelta: 50,
+    //     sensitivity:1,
+    // },
+    autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+  var swiper2 = new Swiper(".information_slide", {
+    slidesPerView: 4,
+    speed: 500,
+    centeredSlides:true,
     // autoplay: {
-    //     delay: 1000,
+    //     delay: 2500,
     //     disableOnInteraction: false,
     // },
-    creativeEffect: {
-        prev: {
-            shadow: true,
-            translate: ["-120%", 0, -500],
-        },
-        next: {
-            shadow: true,
-            translate: ["120%", 0, -500],
-        },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
     },
-});
+    breakpoints: {
+        480: {
+            slidesPerView: 4,
+        },
+        640: {
+            slidesPerView: 8,
+        },
+        1000:  {
+            slidesPerView: 12,
+        },
+    }
+  });
