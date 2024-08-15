@@ -9,7 +9,7 @@
   --bg-body:#ececf0;
   --bg-body-2: #e0e7e7;
   --bg-color-2: #e6efef;
-  --bg-color-3: #d1cccc;
+  --bg-color-3: #dbd9f7;
   --colo-white-3: #f8f8f8;
   --nav-after-color: rgb(212 233 255);
 }
@@ -63,7 +63,7 @@ body {
   padding: 7rem 0;
 }
 .sub-heading{
-  color: var(--heading-color);
+  color: var(--main-color-dark-1);
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
@@ -75,7 +75,7 @@ body {
 }
 
 .heading{
-  color: var(--heading-color);
+  color: var(--main-color-dark-1);
   font-size: 3rem;
   font-family: "Abril Fatface", cursive;
   font-weight: 400;
@@ -129,7 +129,7 @@ body {
   font-family:inherit;
   font-size:0.85rem;
   font-weight:500;
-  color:var(--heading-color);
+  color:var(--main-color-dark-1);
   outline:none;
   transition:0.3s;
 }
@@ -164,6 +164,28 @@ form-input:focus{
   filter: hue-rotate(260deg);
   transition:0.3s opacity;
 }
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border-radius: 17px;
+  background-color: var(--main-color-2);
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  min-width: 125px;
+  text-align: center;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  background-color: var(--main-color-1);
+}
+
 .cta{
   margin-top: 3.5rem;
   display: flex;
@@ -261,68 +283,6 @@ form-input:focus{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
-
-input {
-  padding-inline-end: 10px;
-  padding-inline-start: 10px;
-  background-color: transparent;
-  outline: transparent;
-  border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  margin-right: 10px;
-  transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-}
-
-input::placeholder {
-  color: rgb(117, 152, 242);
-  opacity: 0.5;
-  font-weight: 500;
-}
-
-input[type="email"] {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-input[type="email"]:focus {
-  border: transparent;
-  outline: 2px dotted rgb(117, 152, 242);
-  outline-offset: -3px;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-  max-width: max-content;
-  background: linear-gradient(
-    90deg,
-    rgb(118, 167, 63) 0%,
-    rgb(51, 143, 118) 40%,
-    rgb(55, 141, 167) 50%,
-    rgb(117, 152, 242) 70%,
-    rgb(144, 118, 236) 100%
-  );
-  background-size: 200%;
-  background-position: left;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border: 0;
-  padding: 12px 16px;
-  border-radius: 5px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5),
-    inset 0px 2px 2px rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-}
-
-.btn:hover {
-  background-position: right;
 }
 
 .users-color-container {
@@ -434,7 +394,7 @@ input[type="email"]:focus {
   place-items: center;
   gap: 40px;
   overflow: hidden;
-  padding: 130px 60px;
+  padding: 0 60px 130px 60px;
 }
 .content{
   padding: 0 50px;
@@ -443,7 +403,7 @@ input[type="email"]:focus {
 .content h1{
   font-family: 'Courgette', cursive;
   font-size: clamp(2.3rem, 5vw, 4rem);
-  color: var(--main-color-dark-1);
+  color: var(--main-color-2);
   line-height: 1.3;
   pointer-events: none;
   margin-bottom: 30px;
@@ -455,7 +415,13 @@ input[type="email"]:focus {
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 30px;
-  color: var(--main-color-dark-2);
+  background: rgba(205, 194,255, 0.1);
+  backdrop-filter: blur(20px);
+  text-shadow: 0 5px 25px rgba(0,0,0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgb(0 0 0 /20%);
+  padding: 20px;
+  color: var(--main-color-dark-1);
   text-align: justify;
   pointer-events: none;
 }
@@ -858,7 +824,7 @@ input[type="email"]:focus {
 }
 
 .contact-form h3 {
-  color:var(--heading-color);
+  color:var(--main-color-dark-1);
   font-size:1.3rem;
   font-weight:500;
   margin-bottom:1.6rem;

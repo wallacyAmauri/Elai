@@ -7,10 +7,10 @@ var swiper = new Swiper(".about-slide", {
     //     thresholdDelta: 50,
     //     sensitivity:1,
     // },
-    autoplay: {
-        delay: 5500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 5500,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
