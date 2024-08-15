@@ -6,7 +6,7 @@
   --main-color-dark: #242425;
   --main-color-dark-1: #636277;
   --main-color-dark-2: #bebcbc;
-  --bg-body:#ffffff;
+  --bg-body:#ececf0;
   --bg-body-2: #e0e7e7;
   --bg-color-2: #e6efef;
   --bg-color-3: #d1cccc;
@@ -27,6 +27,7 @@
 }
 
 html {
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 a {
@@ -42,8 +43,21 @@ p{
 .service_p{
   color:var(--colo-dark-2);
 }
+body {
+  background-color: var(--bg-body);
+  color: var(--colo-dark-1);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  z-index: 1;
+}
 /* style geral */
-
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 85rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
 .section {
   position: relative;
   padding: 7rem 0;
@@ -197,11 +211,12 @@ form-input:focus{
   place-items: center;
   gap: 50px;
   background: rgb(199, 199, 199);
-  background: radial-gradient(
-    circle,
-    rgb(255, 255, 255) 3%,
-    rgba(35, 36, 57, 1) 60%
-  );
+  background: 
+    radial-gradient( 
+      circle,
+      rgb(255, 255, 255) 3%,
+      var(--main-color-dark)60%
+    );
   overflow: hidden;
   padding: 130px 80px;
 }
@@ -669,63 +684,149 @@ input[type="email"]:focus {
   height: 100%;
   background-color: var(--main-color-2);
 }
-/* carrosel */
-@keyframes slide {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+/* produtos */
+/* flash sale */
+.container-product {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 0rem 1rem;
 }
 
-.logos {
-  overflow: hidden;
-  padding: 60px 0;
-  background: white;
-  white-space: nowrap;
+.section_category_p {
+  border-left: 1rem solid var(--main-color-1);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--main-color-2);
+  font-size: 1.3rem;
+}
+.section_header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+.section_title {
+  color: var(--colo-white-3) !important;
+  margin-right: 2rem;
+  font-size: 2.6rem;
+}
+.card_rating_numbers{
+    color: var(--main-color-dark-2);
+}
+#demo {
+  font-size: 1.8rem;
+}
+.products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 2rem;
+}
+/* cards */
+.card_container{
+  background: var(--colo-white-3);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  transition: .4s ease;
+  cursor: pointer;
+}
+.card {
+  display: block;
+  margin-bottom: 5rem;
+}
+.card_top {
+  width: 100%;
+  height: 14rem;
   position: relative;
-  margin-bottom:3.8rem;
 }
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
+.card_img {
+  width: 100%;
   height: 100%;
-  content: "";
-  z-index: 2;
+  background: var(--main-color-dark-2);
+    border-radius: 1rem;
+}
+.card_tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9;
+    background-color: var(--main-color-11);
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--colo-white-3);
+    border-radius: 0.5rem;
+}
+.card_top_icons {
+  position: absolute;
+  z-index: 9;
+  top: 1rem;
+  right: 1rem;
+}
+.card_top_icon {
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 1rem;
+  background-color: var(--colo-white-3);
+  border-radius: 10rem;
 }
 
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+.card_top_icon:hover{
+  background-color: var(--main-color-2);
+  color: var(--colo-white-3);
 }
-
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+.card_body {
+  margin-top: 1rem;
+  text-align: left;
 }
-
-.logos:hover .logos-slide {
-  animation-play-state: paused;
+.card_title {
+  color: var(--colo-white-3);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
-
-.logos-slide {
-  display: inline-block;
-  animation: 10s slide linear infinite;
+.card_price {
+  color: var(--main-color-2);
+  margin-bottom: 1rem;
 }
-
-.logos-slide img {
-  height: 50px;
-  margin: 0 40px;
+.card_ratings {
+  display: flex;
 }
- /*-----------contato serviços styling----------- */
+.add_to_cart {
+  padding: .8rem 4.5rem;
+    /* margin: .5rem; */
+    background: var(--main-color-2);
+    color: var(--colo-white-3);
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+}
+.card_stars {
+  margin-right: 1rem;
+}
+.container_btn {
+  width: 100%;
+  text-align: center;
+}
+.container_btn_a {
+  background-color: var(--main-color-2);
+  color: var(--colo-white-3);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.w-6{
+  width: 2rem;
+  height: 2rem;
+}
+ /*contato */
 
  .contact .container{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   column-gap:4rem;
+  padding-left:3rem;
 }
 
 .mail {
@@ -749,12 +850,11 @@ input[type="email"]:focus {
 }
 
 .contact-form{
-  background-color:var(--bg-color-2);
+  background-color:var(--colo-white-3);
   border-radius:20px;
   padding:3.5rem 3rem;
   display:flex;
   flex-direction:column;
-  transition:0.3s background-color;
 }
 
 .contact-form h3 {
@@ -788,15 +888,15 @@ textarea.form-input{
   transform:translate(-50%, 50%);
 }
 
-/*----------- inscrição styling----------- */
+/*inscrição */
 
 .subscription{
   overflow:hidden;
 }
 
 .sub-box{
-  background-color:var(--bg-color-2);
-  padding:5rem;
+  background-color:var(--colo-white-3);
+  padding: 3rem;
   width:100%;
   border-radius:20px;
   display:grid;
@@ -825,7 +925,7 @@ textarea.form-input{
   left:50%;
   transform:translate(-50%,-50%);
   z-index:-1;
-  opacity:0.15;
+  opacity:0.25;
 }
 
 .subscription .square {
@@ -833,6 +933,129 @@ textarea.form-input{
   left:52%;
   bottom:7%;
   transform:translate(0,-50%) scale(0.95);
+}
+
+/* faq */
+#faq{
+  background: var(--bg-body);
+  padding: 84px 0px 144px 134px;
+  display: flex;
+  flex-direction: column;
+}
+.faq-heading{
+  display: flex;
+  flex-direction: column;
+  padding-left: 46px;
+  margin-bottom: 24px;
+}
+.faq-heading h3{
+  font-weight: 700;
+  font-size: 45.25px;
+  line-height: 57px;
+  color: #3B2A82;
+  text-transform: uppercase;
+}
+.faq-heading p{
+  font-weight: 400;
+  font-size: 13.175px;
+  line-height: 20px;
+  color: #7A719B;
+  max-width: 461px;
+}
+.faq-content{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  width: 100%;
+  align-items: flex-start;
+}
+.faq-box{
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid #FFFFFF;
+  box-shadow: 14px 14px 60px rgba(59, 42, 130, 0.06);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.faq-box:last-child{
+  margin-bottom: 0px;
+}
+.faq-box-question{
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.faq-box-question h4{
+  font-weight: 700;
+  font-size: 22.625px;
+  line-height: 31px;
+  color: #3B2A82;
+}
+.faq-box-answer{
+  max-height: 0px;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+}
+.faq-box-answer p{
+  font-weight: 400;
+  font-size: 13.175px;
+  line-height: 20px;
+  color: #7A719B;
+  padding-top: 20px;
+}
+.faq-img{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 27px 0px 0px 27px;
+  display: flex;
+  box-shadow: 14px 14px 60px rgba(59, 42, 130, 0.06);
+  background: var(--colo-white-3);
+}
+.faq-box-container{
+  margin-right: 40px;
+}
+.faq-img img{
+  width: 100%;
+  object-fit: contain;
+  object-position: right;
+}
+
+.faq-box-icon{
+  display: block;
+  position: relative;
+  height: 3px;
+  transition: background 0.2s ease-out;
+  width: 23px;
+  margin-left: auto;
+}
+.faq-box-icon::before,
+.faq-box-icon::after{
+  background: #382B7D;
+  content: '';
+  position: absolute;
+  height: 100%;
+  transition: all ease-out 0.2s;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.faq-box-icon::before{
+  top: 0px;
+}
+.faq-box-icon::after{
+  transform: rotate(90deg);
+  top: 0px;
+}
+.faq-box-question.active h4{
+  color: var(--main-color-2);
+}
+.faq-box-question.active .faq-box-icon::after{
+  transform: rotate(0deg);
 }
 /* services */
 .services_container {
@@ -886,6 +1109,11 @@ textarea.form-input{
   color: var(--main-color-dark-2);
   padding: 1.5rem 0rem;
 }
+@media (max-width: 1200px) {
+  #faq{
+    padding: 84px 0px 144px 20px;
+  }
+}
 @media (max-width: 1070px) {
   /* about */
   .swiper-content{
@@ -926,6 +1154,19 @@ textarea.form-input{
   }
   .card_swiper{
     text-align: initial;
+  }
+  #faq{
+    padding: 84px 0px 144px 20px;
+  }
+  .faq-content{
+    grid-template-columns: 1fr;
+  }   
+  .faq-box-container{
+    margin-right: 0px;
+    padding-right: 20px;
+  }
+  .faq-img{
+    margin-top: 25px;
   }
 }
 @media (max-width: 710px){
@@ -991,6 +1232,34 @@ textarea.form-input{
   }
   .content p{
       font-size: 0.9rem;
+  }
+  #faq{
+    padding: 82px 0px 80px 20px;
+  }
+  .faq-img{
+    border-radius: 18.0651px 0px 0px 18.0651px;
+  }
+  .faq-heading{
+    padding: 0px 20px;
+  }
+  .faq-heading h3{
+    font-weight: 700;
+    font-size: 26.2px;
+    line-height: 33px;
+  }
+  .faq-box-question h4{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 26px;
+  }
+  .faq-box{
+    padding: 24px 21px;
+  }
+  .faq-box-icon{
+    width: 16px;
+  }
+  .faq-box-question{
+    grid-template-columns: 1fr 16px;
   }
 
 }

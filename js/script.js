@@ -44,3 +44,22 @@ var swiper = new Swiper(".about-slide", {
         },
     }
   });
+
+//   faq
+var faq = document.getElementsByClassName("faq-box-question");
+var i;
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Alterne entre adicionar e remover a classe "ativa",
+        para destacar o botão que controla o painel
+        */
+        this.classList.toggle("active");
+        /* Alternar entre ocultar e mostrar o painel ativo */
+        var body = this.nextElementSibling;
+        if (body.style.maxHeight === "100px") {
+            body.style.maxHeight = "0px";
+        } else {
+            body.style.maxHeight = "100px";
+        }
+    });
+}
