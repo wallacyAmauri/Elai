@@ -103,10 +103,10 @@ var swiper = new Swiper(".about-slide", {
         //     thresholdDelta: 50,
         //     sensitivity:1,
         // },
-        // autoplay: {
-            //     delay: 5500,
-            //     disableOnInteraction: false,
-            // },
+        autoplay: {
+                delay: 5500,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 type: "fraction",
@@ -119,7 +119,7 @@ var swiper = new Swiper(".about-slide", {
         
 /*information*/
   var swiper2 = new Swiper(".information_slide", {
-    slidesPerView: 4,
+    // slidesPerView: 4,
     speed: 500,
     centeredSlides:true,
     autoplay: {
@@ -131,18 +131,20 @@ var swiper = new Swiper(".about-slide", {
       clickable: true
     },
     breakpoints: {
-        480: {
-            slidesPerView: 4,
+        240: {
+            slidesPerView: 2,
         },
         640: {
-            slidesPerView: 8,
+            slidesPerView: 4,
         },
         1000:  {
-            slidesPerView: 12,
+            slidesPerView: 6,
         },
-    }
+        1200:  {
+            slidesPerView: 8,
+        },
+    },
   });
-
 /*faq*/
 var faq = document.getElementsByClassName("faq-box-question");
 var i;

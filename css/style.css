@@ -1317,6 +1317,9 @@ textarea.form-input{
   .card_swiper{
     text-align: initial;
   }
+  .swiper-slide_content {
+    width: 300%;
+  }
   #faq{
     padding: 84px 0px 144px 20px;
   }
@@ -1366,34 +1369,50 @@ textarea.form-input{
   }
   /* about */
   .swiper-content{
-      grid-template-columns: 100%;
-      grid-template-rows: 35% 60%;
-      grid-template-areas:
-      "imageContainer"
-      "content";
-      gap: 30px;
-      padding: 80px 40px;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 60%;
+    grid-template-areas:
+    "imageContainer"
+    "content";
+    gap: 30px;
+    padding: 80px 40px;
   }
   .content{
-      grid-area: content;
-      padding: 0 20px 0 0;
+    grid-area: content;
+    padding: 0 20px 0 0;
   }
   .content h1{
-      text-align: center;
+    text-align: center;
   }
   .content p{
-      text-align: center;
+    text-align: center;
   }
   .image-content{
-      grid-area: imageContainer;
+    grid-area: imageContainer;
   }
   .item_about{
-      max-width: 110px;
+    max-width: 110px;
   }
   .btn_about{
-      padding: 0.8rem 1rem;
-      margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    margin: 0 auto;
   }
+  .about-text h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  .swiper_inicio{
+    height: 300px;
+  }
+  .swiper-slide_content {
+    width: 250%;
+  }
+  .card_swiper{
+    margin-bottom: .5rem;
+  }
+
 }
 @media (max-width: 580px){
   /* home */
@@ -1403,7 +1422,7 @@ textarea.form-input{
   /* about */
   .swiper-content{
       grid-template-rows: 40% 55%;
-      padding: 50px 20px 40px;
+      padding: 0px 8px 60px;
   }
   .item_about{
       max-width: 80px;
@@ -1417,7 +1436,7 @@ textarea.form-input{
   /* about */
   .swiper-content{
       grid-template-rows:35% 60%;
-      padding: 50px 20px 40px;
+      padding: 0px 8px 60px;
   }
   .item_about{
       max-width: 80px;
