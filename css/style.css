@@ -1635,6 +1635,13 @@ textarea.form-input{
   .content p{
       font-size: 0.9rem;
   }
+  /* product */
+  .card_body {
+    text-align: center;
+  }
+  .card_ratings {
+    justify-content: center;
+  }
   /* contact */
   .contact-form p{
     font-size:1.2rem;
