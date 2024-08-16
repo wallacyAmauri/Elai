@@ -784,7 +784,7 @@ body.open .hamburger .bar:last-child{
 }
 .swiper-slide_content{
   font-size: 1rem;
-  width: 400%;
+  width: 300%;
   height: 100%;
   position: absolute;
 }
