@@ -1,122 +1,93 @@
+
+let mixer = mixitup('.products', { 
+    selectors: {
+      target: '.card'
+     },
+   animation: {
+     duration: 500,
+   },
+ });
+
 /*header*/
-const header = document.querySelector("header");
-const hamburger = document.querySelector(".hamburger");
+// const header = document.querySelector("header");
+const ulMenu = document.querySelector("menu");
+const menuLink = document.querySelector("nav-link");
+// const hamburger = document.querySelector(".hamburger");
 const links = document.querySelectorAll(".nav-link");
 
-/* ----------- para rodar os codigos dos Scroll ----------- */
-window.addEventListener("scroll", () => {
-  activeLink();
-  if(!skillsPlayed) skillsCounter();
-  if(!mlPlayed) mlCounty();
-  
-});
-
-/* ----------- codigo do Navbar ----------- */
-
-function stickNavbar(){
-    header.classList.toggle("scrolled",window.scrollY > 0);
- }
- 
- stickNavbar();
- 
- window.addEventListener("scroll", stickNavbar);
- 
-/* ----------- abrir e fechar navbar menu ----------- */
-
-hamburger.addEventListener("click", () => {
-    document.body.classList.toggle("open");
-    document.body.classList.toggle("stopScrolling");
-});
-/* ----------- progresso de animação de barra ----------- */
-
-function hasReached(el) {
-  let topPosition = el.getBoundingClientRect().top;
-  
-  if(window.innerHeight >= topPosition +el.offsetHeight) return true;
-  return false;
+function scrollHeader(){
+    const header = document.getElementById('header');
+    this.scrolly >= 20 ? header.classList.add('active') : header.classList.remove('active')
+    console.log(this.scrolly)
 }
 
+window.addEventListener('scroll', scrollHeader)
+const sections = document.querySelectorAll('section[id]');
 
-let skillsPlayed = false;
+function scrollActive(){
+    const scrollY = window.pageYOffset;
 
-function skillsCounter() {
-  if(!hasReached(first_skill)) return;
+    sections.forEach(section =>{
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 50;
 
-  let skillsPlayed = true;
+        let sectionId = section.getAttribute('id');
 
-  sk_counters.forEach((counter, i) => {
-  let target = +counter.dataset.target;
-  let strokeValue = 427 - 427 * (target / 100);
-
-  progress_bars[i].style.setProperty("--target", strokeValue);
-
-  setTimeout(() =>{
-      updateCount(counter,target);
-  }, 400);    
-});
-
-  progress_bars.forEach(
-      (p) =>(p.style.animation = "progress 2s ease-in-out forwards")
-      );
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.menu a[href *=' + sectionId + ']').classList.add('active')
+        } else{
+            document.querySelector('.menu a[href *=' + sectionId + ']').classList.remove('active')
+        }
+    });
 }
-
-    /* ----------- contagem de serviços Navbar ----------- */
-
-    let mlPlayed = false;
-
-    function mlCounty() {
-        if(!hasReached(ml_section)) return;
-        mlPlayed = true;
-        ml_counters.forEach((ctr) => {
-            let target = +ctr.dataset.target;
-            
-            setTimeout(() => {
-                updateCount(ctr, target);
-            }, 400);
-        });
-    }
-/* ----------- scroll do link active ----------- */
-
-function activeLink() {
-  let sections = document.querySelectorAll("section[id]");
-  let passedSections = Array.from(sections).map((sct, i) => {
-      return {
-          y:  sct.getBoundingClientRect().top - header.offsetHeight,
-          id: i,
-      };
-  })
-  .filter((sct) => sct.y <= 0);
-  let currSectionID = passedSections.at(-1).id;
-  
-  links.forEach((l) => l.classList.remove("active"));
-  links[currSectionID].classList.add("active");
-} 
-activeLink();
-
+window.addEventListener('scroll', scrollActive)
 /*about*/
-var swiper = new Swiper(".about-slide", {
-    effect: "slide",
-    speed: 900,
-    loop:true,
-    // mousewheel: {
-        //     invert:false,
-        //     thresholdDelta: 50,
-        //     sensitivity:1,
-        // },
-        autoplay: {
-                delay: 5500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-        
+// var swiper = new Swiper("...", {
+//     effect: "slide",
+//     speed: 900,
+//     loop:true,
+//     // mousewheel: {
+//         //     invert:false,
+//         //     thresholdDelta: 50,
+//         //     sensitivity:1,
+//         // },
+//     autoplay: {
+//             delay: 5500,
+//             disableOnInteraction: false,
+//         },
+//         pagination: {
+//             el: ".swiper-pagination",
+//             type: "fraction",
+//         },
+//         navigation: {
+//             nextEl: ".swiper-button-next",
+//             prevEl: ".swiper-button-prev",
+//         },
+// });
+/* ----------- swiper about ----------- */
+var swiper3 = new Swiper(".about-grid-home", {
+    effect: "creative",
+    grabCursor: true,
+    speed: 1500,
+    loop: true,
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: [0, 0, -800],
+            rotate: [180, 0, 0],
+          },
+          next: {
+            shadow: true,
+            translate: [0, 0, -800],
+            rotate: [-180, 0, 0],
+          },
+    },
+    autoplay: {
+        delay: 1400,
+        disableOnInteraction: false,
+    },
+});
+     
 /*information*/
   var swiper2 = new Swiper(".information_slide", {
     // slidesPerView: 4,
@@ -163,3 +134,23 @@ for (i = 0; i < faq.length; i++) {
         }
     });
 }
+var swiper3 = new Swiper(".team-slider", {
+    autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+    },
+    grapCursor: true,
+    loop: true,
+    spaceBetween: 20,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991:  {
+            slidesPerView: 3,
+        },
+    },
+  });
