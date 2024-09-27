@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 64 64" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<style type="text/css">
+	.st0{fill:none;stroke:#001969;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#55427e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#55427e;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#55427e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:#55427e;}
+	.st5{fill:none;stroke:#001969;stroke-width:2;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#55427e;stroke-width:2;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#2B3088;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#001969;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#55427e;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+
+<polyline class="st0" points="38,19 45,19 45,26 "/>
+
+<polyline class="st0" points="42,15 49,15 49,22 "/>
+
+<polyline class="st0" points="19,26 19,19 26,19 "/>
+
+<polyline class="st0" points="15,22 15,15 22,15 "/>
+
+<polyline class="st0" points="45,38 45,45 38,45 "/>
+
+<polyline class="st0" points="49,42 49,49 42,49 "/>
+
+<polyline class="st0" points="26,45 19,45 19,38 "/>
+
+<polyline class="st0" points="22,49 15,49 15,42 "/>
+
+<g>
+
+<path class="st2" d="M36.6,38h-9.3c-0.2,0-0.4-0.2-0.4-0.4v-7.3c0-0.2,0.2-0.4,0.4-0.4h9.3c0.2,0,0.4,0.2,0.4,0.4v7.3   C37,37.8,36.8,38,36.6,38z"/>
+
+<path class="st2" d="M35,30H29c-0.2,0-0.4-0.2-0.4-0.4v-1.3c0-1.8,1.5-3.3,3.3-3.3h0c1.8,0,3.3,1.5,3.3,3.3v1.3   C35.3,29.8,35.2,30,35,30z"/>
+
+<line class="st1" x1="32" x2="32" y1="34" y2="34"/>
+
+</g>
+
+</svg>

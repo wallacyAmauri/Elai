@@ -1,15 +1,15 @@
-
-let mixer = mixitup('.products', { 
-    selectors: {
-      target: '.card'
-     },
-   animation: {
-     duration: 500,
-   },
- });
-
 /*header*/
-// const header = document.querySelector("header");
+/* ----------- codigo do Navbar ----------- */
+
+function stickNavbar(){
+    header.classList.toggle("scrolled",window.scrollY > 0);
+ }
+ 
+ stickNavbar();
+ 
+ window.addEventListener("scroll", stickNavbar);
+
+ // const header = document.querySelector("header");
 const ulMenu = document.querySelector("menu");
 const menuLink = document.querySelector("nav-link");
 // const hamburger = document.querySelector(".hamburger");
@@ -41,6 +41,14 @@ function scrollActive(){
     });
 }
 window.addEventListener('scroll', scrollActive)
+let mixer = mixitup('.products', { 
+    selectors: {
+      target: '.card'
+     },
+   animation: {
+     duration: 500,
+   },
+ });
 /*about*/
 // var swiper = new Swiper("...", {
 //     effect: "slide",
